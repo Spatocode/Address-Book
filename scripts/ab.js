@@ -112,4 +112,21 @@ window.onload = () => {
         };
       }
 
+      function deleteItem(e) {
+        let contactId = Number(e.target.parentNode.getAttribute('data-contact-id'));
+        let transaction = db.transaction(['contacts'], 'readwrite');
+        let objectStore = transaction.objectStore('contacts');
+        let request = objectStore.delete(contactId);
+    
+        transaction.oncomplete = () => {
+          e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+          console.log('Contact ' + contactId + ' deleted.');
+
+          if(!conData.firstChild) {
+            let para = document.createElement('p');
+            para.textContent = 'No notes stored.';
+            conData.appendChild(para);
+          }
+        };
+      }
 }

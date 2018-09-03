@@ -3,7 +3,7 @@ html,body{
 }
 body{
     margin: 0px auto;
-    max-width: 800px;
+    max-width: 1000px;
 }
 h1{
     margin: 0;
@@ -11,7 +11,7 @@ h1{
 th{
     color: rgb(56, 56, 56);
     border: 1px solid rgb(190,190,190);
-    padding: 10px 45px;
+    padding: 10px 60px;
 }
 td{
     border: 1px solid rgb(190,190,190);

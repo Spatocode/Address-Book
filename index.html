@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/ab.css">
     <title>Address Book</title>
 </head>
 <body>
@@ -17,7 +18,15 @@
 
             </div>
             <table>
-        
+                <tr>
+                    <thead>
+                        <th class="">Name</th>
+                        <th>Address</th>
+                        <th>Telephone</th>
+                        <th>Email</th>
+                        <th>Website</th>
+                    </thead>
+                </tr>
             </table>
         </section>
         <section id="new-contact">
@@ -25,23 +34,23 @@
             <form>
                 <div>
                     <label for="name">Name:</label>
-                    <input id="name" type="text" required>
+                    <input id="name" type="text"  maxlength="15" required>
                 </div>
                 <div>
                     <label for="add">Address:</label>
-                    <input id="add" type="text" required>
+                    <input id="add" type="text" maxlength="30" required>
                 </div>
                 <div>
                     <label for="tel">Telephone:</label>
-                    <input id="tel" type="tel" required>
+                    <input id="tel" type="tel" maxlength="15" required>
                 </div>
                 <div>
                     <label for="email">Email:</label>
-                    <input id="email" type="email" required>
+                    <input id="email" type="email" maxlength="30" required>
                 </div>
                 <div>
                     <label for="url">Website:</label>
-                    <input id="url" type="url">
+                    <input id="url" type="url" maxlength="20">
                 </div>
                 <div>
                     <button>Create contacts</button>
@@ -52,5 +61,6 @@
     <footer>
         <p>Developed by Spatocode</p>
     </footer>
+    <script src="./scripts/ab.js"></script>
 </body>
 </html>
